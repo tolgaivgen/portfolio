@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Archive // Tolgahan İvgen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <p>SEARCHING ARCHIVE...</p>
+      <div class="bar"><span></span></div>
+      <p class="found">ARCHIVE FOUND</p>
+      <p class="opening">OPENING...</p>
+    </div>
+  </div>
+
+  <canvas class="paint-canvas" id="paintCanvas" aria-hidden="true"></canvas>
+  <div class="brush-cursor" id="brushCursor" aria-hidden="true"></div>
+
+  <div class="cursor" id="cursor"><span></span></div>
+
+  <button class="paint-toggle" id="paintToggle" aria-label="Open paint tool">
+    <span>✦</span>
+    <b>BRUSH</b>
+  </button>
+
+  <aside class="paint-panel" id="paintPanel" aria-hidden="true">
+    <div class="paint-head">
+      <span>PAINT MODE</span>
+      <button id="paintClose" aria-label="Exit paint mode">×</button>
+    </div>
+    <p class="paint-help">Hold mouse and paint the page.</p>
+    <div class="paint-colors" id="paintColors">
+      <button data-color="#0B0B0B" style="--paint:#0B0B0B" aria-label="Black"></button>
+      <button data-color="#FFFFFF" style="--paint:#FFFFFF" aria-label="White"></button>
+      <button data-color="#FF3B30" style="--paint:#FF3B30" aria-label="Red"></button>
+      <button data-color="#FF9500" style="--paint:#FF9500" aria-label="Orange"></button>
+      <button data-color="#FFD60A" style="--paint:#FFD60A" aria-label="Yellow"></button>
+      <button data-color="#34C759" style="--paint:#34C759" aria-label="Green"></button>
+      <button data-color="#00C7BE" style="--paint:#00C7BE" aria-label="Turquoise"></button>
+      <button data-color="#0A84FF" style="--paint:#0A84FF" aria-label="Blue"></button>
+      <button data-color="#5E5CE6" style="--paint:#5E5CE6" aria-label="Indigo"></button>
+      <button data-color="#BF5AF2" style="--paint:#BF5AF2" aria-label="Purple"></button>
+      <button data-color="#FF2D55" style="--paint:#FF2D55" aria-label="Pink"></button>
+      <button data-color="#A2845E" style="--paint:#A2845E" aria-label="Brown"></button>
+    </div>
+    <div class="brush-sizes" id="brushSizes" aria-label="Brush size">
+      <button data-size="14">S</button>
+      <button data-size="28" class="is-active">M</button>
+      <button data-size="48">L</button>
+    </div>
+    <button class="paint-clear" id="paintClear">CLEAR PAINT</button>
+  </aside>
+
+  <header class="nav">
+    <a class="logo" href="#top">TOLGAHAN İVGEN</a>
+    <nav>
+      <a href="#archive">WORKS</a>
+      <a href="#about">ABOUT</a>
+      <a href="#contact">CONTACT</a>
+      <span class="dot"></span>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="side-note left">
+        <p>ideas<br>that move<br>people</p>
+        <i></i>
+      </div>
+
+      <div class="portrait-wrap" id="portraitWrap">
+        <img src="assets/sequence/gif072.png" alt="Tolgahan İvgen portrait illustration" class="portrait" id="portrait" draggable="false" />
+      </div>
+
+      <div class="intro-copy">
+        <p>Creative archive of AI visuals, campaign ideas, concept design and motion-driven storytelling.</p>
+      </div>
+
+      <div class="drag-note">move<br>your mouse <span>→</span></div>
+      <div class="scroll-note">scroll<br>down <span>↓</span></div>
+    </section>
+
+    <section class="archive" id="archive">
+      <div class="section-title">
+        <span>SELECTED WORK</span>
+        <h1>ARCHIVE</h1>
+      </div>
+
+      <div class="archive-cinema" id="archiveCinema" aria-hidden="true">
+        <div class="cinema-line">
+          <span>ideas</span>
+          <i class="cinema-card c1"><b>AI VISUALS</b></i>
+          <span>that</span>
+          <i class="cinema-card c2"><b>CAMPAIGNS</b></i>
+        </div>
+        <div class="cinema-line second">
+          <i class="cinema-card c3"><b>KEY VISUALS</b></i>
+          <span>turn into</span>
+        </div>
+        <div class="cinema-line third">
+          <span>visual</span>
+          <i class="cinema-card c4"><b>MOTION</b></i>
+          <span>archives.</span>
+        </div>
+
+        <div class="archive-grid-preview">
+          <div class="preview-card wide"><small>AGENT 01</small><strong>Akbank Sanat</strong></div>
+          <div class="preview-card"><small>AGENT 02</small><strong>Young Lions</strong></div>
+          <div class="preview-card tall"><small>AGENT 03</small><strong>AI Character</strong></div>
+          <div class="preview-card"><small>AGENT 04</small><strong>Campaigns</strong></div>
+          <div class="preview-card wide"><small>AGENT 05</small><strong>Social</strong></div>
+        </div>
+      </div>
+
+      <div class="files">
+        <a class="file" href="https://www.behance.net/gallery/243004941/AKBANK-SANAT-SINIR-DURUMLAR" target="_blank" rel="noopener noreferrer"><span>001</span><strong>AKBANK SANAT - SINIR DURUMLAR</strong><em>↗</em></a>
+        <a class="file" href="https://www.behance.net/gallery/236204037/TikTok-Drama-Vaseline" target="_blank" rel="noopener noreferrer"><span>002</span><strong>TikTok Drama - Vaseline</strong><em>↗</em></a>
+        <a class="file" href="https://www.behance.net/gallery/200790897/DACIA-KLOMETREYE-ENDEKSL-KAMPANYA" target="_blank" rel="noopener noreferrer"><span>003</span><strong>DACIA / KİLOMETREYE ENDEKSLİ KAMPANYA</strong><em>↗</em></a>
+        <a class="file" href="https://www.behance.net/gallery/195095565/YOUNG-LIONS-2024-DIGITAL-SILVER-WINNER" target="_blank" rel="noopener noreferrer"><span>004</span><strong>YOUNG LIONS 2024 - DIGITAL SILVER WINNER</strong><em>↗</em></a>
+        <a class="file" href="https://www.behance.net/gallery/221900005/YOUNG-LIONS-2025-DIGITAL-SILVER-WINNER" target="_blank" rel="noopener noreferrer"><span>005</span><strong>YOUNG LIONS 2025 - DIGITAL SILVER WINNER</strong><em>↗</em></a>
+        <a class="file" href="https://www.behance.net/gallery/243840779/FEELREAL-AI-CHARACTER-DESIGN" target="_blank" rel="noopener noreferrer"><span>006</span><strong>#FEELREAL AI CHARACTER DESIGN</strong><em>↗</em></a>
+        <a class="file" href="https://www.behance.net/gallery/176674273/GRATIS-VISUAL-ECHOES-DESIGN-PROJECT" target="_blank" rel="noopener noreferrer"><span>007</span><strong>GRATIS VISUAL ECHOES / DESIGN PROJECT</strong><em>↗</em></a>
+        <a class="file" href="https://www.behance.net/gallery/177663411/Tuerk-Telekom-Social-Media" target="_blank" rel="noopener noreferrer"><span>008</span><strong>Türk Telekom Social Media</strong><em>↗</em></a>
+        <a class="file" href="https://www.behance.net/gallery/178685587/HSBC-Social-Media" target="_blank" rel="noopener noreferrer"><span>009</span><strong>HSBC Social Media</strong><em>↗</em></a>
+        <a class="file" href="https://www.behance.net/gallery/178746989/TFF-A-MLL-TAKIM-SOCIAL-MEDIA" target="_blank" rel="noopener noreferrer"><span>010</span><strong>TFF / A MİLLİ TAKIM SOCIAL MEDIA</strong><em>↗</em></a>
+        <a class="file" href="https://www.behance.net/gallery/133962649/GOART-METAVERSE-BRAND-IDENTITY" target="_blank" rel="noopener noreferrer"><span>011</span><strong>GOART METAVERSE / BRAND IDENTITY</strong><em>↗</em></a>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div>
+        <span class="eyebrow">ABOUT</span>
+        <h2>I build ideas people remember.</h2>
+      </div>
+      <div class="about-content">
+        <p>Creative Designer based in Türkiye, focused on AI visuals, campaign concepts, key visuals and motion-driven storytelling.</p>
+        <p>Every project starts with an insight and ends with an experience.</p>
+        <div class="contact-list">
+          <a href="mailto:tolga.ivgen@gmail.com"><span>MAIL</span><strong>tolga.ivgen@gmail.com</strong></a>
+          <a href="https://www.instagram.com/tolga.ivgen" target="_blank" rel="noopener noreferrer"><span>INSTAGRAM</span><strong>@tolga.ivgen</strong></a>
+          <a href="https://www.linkedin.com/in/tolgahan-ivgen-b8b6751a3/" target="_blank" rel="noopener noreferrer"><span>LINKEDIN</span><strong>tolgahan-ivgen-b8b6751a3</strong></a>
+          <a href="https://www.behance.net/tolgahanivgen" target="_blank" rel="noopener noreferrer"><span>BEHANCE</span><strong>behance.net/tolgahanivgen</strong></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <span>© 2026</span>
+    <button>Tolgahan Portfolio</button>
+    <span>tolga.ivgen@gmail.com</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
